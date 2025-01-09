@@ -65,19 +65,19 @@ mongoose
     process.exit(1); // Exit if the connection fails
   });
 
-const initDB = async () => {
-  try {
-    const postCount = await Post.countDocuments();
-    if (postCount === 0) {
-      await Post.insertMany(postData);
-      console.log("Initial data seeded.");
-    }
-  } catch (error) {
-    console.error("Error during database initialization:", error.message);
-  }
-};
+// const initDB = async () => {
+//   try {
+//     const postCount = await Post.countDocuments();
+//     if (postCount === 0) {
+//       await Post.insertMany(postData);
+//       console.log("Initial data seeded.");
+//     }
+//   } catch (error) {
+//     console.error("Error during database initialization:", error.message);
+//   }
+// };
 
-initDB();
+// initDB();
 
 // Using all the imported routes
 app.use("/", registerRoute);
