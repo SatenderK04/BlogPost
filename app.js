@@ -53,7 +53,12 @@ app.use(morgan("combined"));
 // Database Initialization
 const MONGODB = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Blogpost";
 mongoose
-  .connect(MONGODB)
+  .connect(MONGODB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 30000,  
+  socketTimeoutMS: 45000         
+})
   .then(() => console.log("Connection Successful"))
   .catch((err) => {
     console.error("MongoDB connection error:", err);
