@@ -1,0 +1,53 @@
+.category {
+  height: 68vh;
+  width: 25vw;
+  border-right: 2px solid black;
+  position: fixed;
+  top: 10%;
+  text-align: center;
+  padding: 1rem;
+  padding-top: 0.5rem;
+}
+
+.category h2 {
+  /* text-align: center; */
+  margin: 0 auto;
+  width: 10rem;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.category-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 5px;
+  margin: 0.5rem auto;
+  list-style: none;
+}
+
+.category-items li {
+  /* background-color: rgb(39, 39, 39); */
+  margin: 0.25rem;
+  display: inline-block;
+  height: 2rem;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 0.25rem;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-items li a {
+  color: black;
+  text-decoration: none;
+}
+
+.category-items li:hover {
+  background-color: rgb(57, 65, 149);
+  transition: background-color ease-in 0.2s;
+}
+.category-items li:hover a {
+  color: white;
+}

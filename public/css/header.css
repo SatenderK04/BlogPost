@@ -1,0 +1,153 @@
+.head {
+  height: 3.5rem;
+  width: 100%;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1.5rem;
+  position: fixed;
+  background-color: rgb(31, 34, 68);
+  /* top: 4rem; */
+}
+
+.head .createPost .createPostLink {
+  text-decoration: none;
+  color: white;
+  font-size: 1.05rem;
+}
+.head .createPost {
+  height: 2.3rem;
+  width: 6rem;
+  border-radius: 10px;
+  background-color: black;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.head .searchContainer {
+  display: flex;
+  align-items: center;
+  /* margin-right: 2rem; */
+  /* border: 2px solid red; */
+}
+.head .searchForm {
+  margin-right: 0.5rem;
+  display: flex;
+  /* border: 2px solid red; */
+  height: 2.5rem;
+  width: 25rem;
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+
+.searchForm .searchBar {
+  padding: 0.25rem;
+  width: 80%;
+  height: 2.25rem;
+  font-size: 1.05rem;
+}
+.searchForm .searchButton {
+  height: 2.25rem;
+  width: 6rem;
+  border: 1px solid white;
+  background-color: rgb(47, 47, 47);
+  color: white;
+  font-size: 1.05rem;
+  cursor: pointer;
+  /* margin-left: 0.25rem; */
+}
+
+.logo img {
+  padding-top: 0.75rem;
+  /* border: 1px solid red; */
+  height: 7rem;
+}
+
+.user-header {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.user-header .user-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 3px solid white;
+  cursor: auto;
+}
+.user-header .user-image .fa-user {
+  font-size: 1.5rem;
+}
+.user-header .user-name {
+  display: flex;
+  padding-left: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+  cursor: pointer;
+  height: 2rem;
+  min-width: 6rem;
+}
+.profile-options {
+  border: 1px solid black;
+  border-bottom: none;
+  position: absolute;
+  top: 3.25rem;
+  right: 1rem;
+  background-color: white;
+  width: 120px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.profile-options ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  color: black;
+}
+
+.profile-options ul li {
+  border-bottom: 1px solid rgb(96, 96, 96);
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+
+.profile-options ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.logout form .logout-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: white;
+  text-align: left;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.profile-options.hide {
+  max-height: 0;
+}
+
+.profile-options.show {
+  max-height: 20rem;
+}
+.profile-options ul li a:hover {
+  color: blue;
+  cursor: pointer;
+}
+.profile-options ul li button:hover {
+  color: blue;
+  cursor: pointer;
+}

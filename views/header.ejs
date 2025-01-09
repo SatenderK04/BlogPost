@@ -1,0 +1,35 @@
+<div class="head">
+    <div class="logo">
+        <a href="/posts"><img src="images/logo.png" alt=""></a>
+
+    </div>
+    <div class="searchContainer">
+        <form action="/search" method="GET" class="searchForm">
+            <input class="searchBar" type="text" name="query" placeholder="Search posts..." required />
+            <button type="submit" class="searchButton">Search</button>
+        </form>
+        <button class="createPost">
+            <a class="createPostLink" target="_blank" href="/new">New Post</a>
+        </button>
+    </div>
+    <div class="user-header">
+        <div class="user-image"><i class="fa-solid fa-user"></i></div>
+        <div class="user-name">
+            <%= user.username %>
+        </div>
+        <div class="profile-options">
+            <ul>
+                <li><a href="/posts">Home</a></li>
+                <li><a href="https://github.com/SatenderK04" target="_blank">Contact</a></li>
+                <li><a href="https://google.com">Explore</a></li>
+                <li class="logout">
+                    <form action="/logout" method="POST">
+                        <button type="submit" class="logout-btn">
+                            Logout
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

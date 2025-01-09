@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>BlogPost | Read & Write your daily blogs</title>
+</head>
+
+<body>
+    <%- include('header.ejs') %>
+        <%- include('category.ejs') %>
+            <div class="post-container">
+                <% for (let post of posts){ %>
+                    <div class="post">
+                        <div class="user">
+                            <i class="fa-solid fa-user user-icon"></i>
+                            <h3 class="username">
+                                <%= post.username %>
+                            </h3>
+                        </div>
+                        <div class="img">
+                            <img src="<%= post.image.startsWith('http') ? post.image : '/images/' + post.image %>"
+                                alt="No Image">
+                        </div>
+
+                        <div class="content">
+                            <p class="title">
+                                <%=post.title %>
+                            </p>
+                            <p>
+                                <%= post.content %>
+                            </p>
+                        </div>
+                        <p class="tags">
+                            <%= post.tags.map(tag=> `#${tag}`).join(" ") %>
+                        </p>
+                        <div class="date-time">
+                            <p class="date">
+                                <%= post.createdAt.toString().slice(0,16).split("-").reverse().join(".") %>
+                            </p>
+                            <p class="time">
+                                <%= new Date(post.createdAt).toLocaleTimeString("en-US", { hour: "2-digit" ,
+                                    minute: "2-digit" , }) %>
+                            </p>
+
+                        </div>
+                        <div class="buttons">
+                            <form action="/posts/<%= post._id%>" method="GET">
+                                <button class="edit" type="submit">Edit</button>
+                            </form>
+                            <form action="/posts/<%= post._id%>?_method=DELETE" method="POST">
+                                <button class="delete" type="submit">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% }%>
+            </div>
+            <%- include('footer.ejs') %>
+                <script src="/js/formValidator.js"></script>
+                <script src="/js/script.js"></script>
+</body>
+
+</html>

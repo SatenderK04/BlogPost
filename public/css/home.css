@@ -1,0 +1,118 @@
+.post-container {
+  padding-top: 4rem;
+  margin: 0 auto;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; */
+  min-height: 90vh;
+}
+
+.post-container .deletePost {
+  text-decoration: none;
+  color: white;
+}
+.post-container .editPost {
+  text-decoration: none;
+  color: white;
+}
+
+.post-container .post {
+  width: 600px;
+  margin: 0.5rem auto;
+  /* border-bottom: 1px solid black; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: rgb(238, 255, 245);
+  padding: 1rem 0;
+}
+.post-container .title {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.65rem;
+}
+.post-container .content {
+  font-size: 1rem;
+  max-height: 300px;
+  width: 450px;
+  padding: 0.5rem;
+  margin: auto;
+}
+.img {
+  border: 2px solid gray;
+  height: 250px;
+  width: 450px;
+  margin: 0.5rem auto;
+  margin-bottom: 0;
+}
+
+.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.post-container .tags {
+  border-bottom: 2px solid black;
+  padding-bottom: 0.5rem;
+  color: rgb(65, 99, 212);
+  max-height: 100px;
+  width: 450px;
+  font-size: 1.15rem;
+  margin: 0.5rem auto;
+}
+.post-container .user {
+  margin: 0.5rem 4.75rem;
+  min-width: 5rem;
+  padding: 0.15rem 0.5rem;
+  border-bottom: 3px solid black;
+  /* border: 1px solid red; */
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+}
+.user .user-icon {
+  font-size: 1.25rem;
+}
+.post-container .username {
+  word-wrap: break-word;
+  margin-left: 0.5rem;
+}
+.post-container .date-time {
+  display: flex;
+  justify-content: space-between;
+  max-height: 100px;
+  width: 450px;
+  margin: 0.5rem auto;
+}
+
+.post-container .buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 4rem;
+}
+.buttons button:hover {
+  cursor: pointer;
+}
+.buttons .edit {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(97, 97, 97);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+.buttons .delete {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(255, 110, 110);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 10px;
+}
