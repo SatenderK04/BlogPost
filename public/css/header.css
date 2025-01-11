@@ -85,6 +85,7 @@
 .user-header .user-name {
   display: flex;
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
   justify-content: flex-start;
   align-items: center;
   border-bottom: 2px solid white;

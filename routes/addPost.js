@@ -23,7 +23,7 @@ const addPost = async (req, res) => {
     const newPost = new Post({
       title,
       content,
-      tags: tags ? tags.split(",").map((tag) => tag.trim()) : [],
+      tags: tags ? tags.split(" ").map((tag) => tag.trim()) : [],
       image,
       userId: user.id,
       username: user.username, // Ensure username is set correctly

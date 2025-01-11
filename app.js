@@ -51,17 +51,17 @@ app.use(
 app.use(morgan("combined"));
 
 // Database Initialization
-// const MONGODB = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Blogpost";
-// const dbURI = 'mongodb+srv://satenderk1204:Qz0L0afu5ZNMC4a0@cluster0.hrydr.mongodb.net/Blogpost?retryWrites=true&w=majority';
-const MONGODB = process.env.MONGODB_URI;
-mongoose.connect(MONGODB, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+const MONGODB = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Blogpost";
+
+mongoose
+  .connect(MONGODB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connection Successful"))
   .catch((err) => {
     console.error("MongoDB connection error:", err);
-    process.exit(1); // Exit if the connection fails
+    process.exit(1);
   });
 
 // const initDB = async () => {
