@@ -23,5 +23,5 @@ A full-stack blog website where users can create, edit, delete, and view blog po
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SatenderK04/BlogPost.git
-   cd blogpost
+   git clone https://github.com/SatenderK04/Blogpost.git
+   cd Blogpost
