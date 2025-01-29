@@ -17,7 +17,6 @@ const loginUser = async (req, res) => {
     const user = await User.findOne({ username: username });
     console.log(user);
     if (!user) {
-      // res.status(401).json({ message: "User Not Found" });
       return res.render("userNotFound.ejs");
     }
     const hashedPassword = user.password;

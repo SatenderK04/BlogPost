@@ -51,7 +51,9 @@ app.use(
 app.use(morgan("combined"));
 
 // Database Initialization
-const MONGODB = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Blogpost";
+const MONGODB =
+  process.env.MONGODB_URI ||
+  "mongodb+srv://satenderk1204:Qz0L0afu5ZNMC4a0@cluster0.hrydr.mongodb.net/Blogpost?retryWrites=true&w=majority";
 
 mongoose
   .connect(MONGODB, {
@@ -63,20 +65,6 @@ mongoose
     console.error("MongoDB connection error:", err);
     process.exit(1);
   });
-
-// const initDB = async () => {
-//   try {
-//     const postCount = await Post.countDocuments();
-//     if (postCount === 0) {
-//       await Post.insertMany(postData);
-//       console.log("Initial data seeded.");
-//     }
-//   } catch (error) {
-//     console.error("Error during database initialization:", error.message);
-//   }
-// };
-
-// initDB();
 
 // Using all the imported routes
 app.use("/", registerRoute);
